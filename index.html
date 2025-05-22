@@ -89,7 +89,6 @@
     .actions {
       text-align: center;
       margin-top: 30px;
-      flex-wrap: wrap;
     }
 
     button {
@@ -100,7 +99,7 @@
       color: white;
       border: none;
       border-radius: 10px;
-      margin: 10px 5px;
+      margin: 0 10px;
       cursor: pointer;
       transition: 0.3s;
     }
@@ -141,32 +140,24 @@
       }
     }
 
-    /* Responsive Design for Phones */
     @media (max-width: 768px) {
       .container {
+        margin: 20px;
         padding: 25px;
-        margin: 30px 15px;
       }
 
       h1 {
-        font-size: 42px;
+        font-size: 40px;
+        line-height: 1.2;
       }
 
       h2 {
-        font-size: 22px;
+        font-size: 20px;
       }
 
       pre {
         font-size: 14px;
         padding: 15px;
-      }
-
-      button {
-        width: 100%;
-        max-width: 300px;
-        margin: 10px auto;
-        display: block;
-        font-size: 15px;
       }
     }
   </style>
@@ -197,7 +188,7 @@ Début
 
     v ← g * t
 
-    Si v &lt; 30 Alors
+    Si v < 30 Alors
         Écrire("Pas dangereux")
     Sinon Si v ≤ 60 Alors
         Écrire("Danger modéré")
@@ -246,7 +237,7 @@ début
         ecrie("Code invalide: doit avoir 9 caractères")
     fin_si
 
-    sinon si code[0] &lt; '0' or code[0] &gt; '9' alors
+    sinon si code[0] < '0' or code[0] > '9' alors
         ecrie("Code invalide: le premier caractère doit être un chiffre")
     fin_si
 
@@ -257,7 +248,7 @@ début
     sinon
         erreur = 0
         pour i de 2 à 8 faire
-            si code[i] &lt; 'A' or code[i] &gt; 'Z' alors
+            si code[i] < 'A' or code[i] > 'Z' alors
                 erreur = 1
             fin_si
         fin_pour
