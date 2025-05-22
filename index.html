@@ -36,24 +36,6 @@
       transition: all 0.4s ease;
     }
 
-    @media print {
-      body {
-        background: var(--bg-color) !important;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-      }
-
-      .container {
-        background-color: var(--container-bg) !important;
-        color: var(--text-color) !important;
-        box-shadow: none !important;
-      }
-
-      button, .actions {
-        display: none !important;
-      }
-    }
-
     .container {
       max-width: 1000px;
       margin: 60px auto;
@@ -178,6 +160,29 @@
         padding: 15px;
       }
     }
+
+    /* === الطباعة - Print Styles === */
+    @media print {
+      body, .container {
+        background-color: #111 !important;
+        color: #f0f0f0 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      pre {
+        background-color: #1a1a1a !important;
+        color: #f0f0f0 !important;
+        border-left-color: #ff4444 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      /* إخفاء أزرار الطباعة عند الطباعة */
+      .actions {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -287,5 +292,6 @@ début
   </script>
 </body>
 </html>
+
 
 
