@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Correction</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+    :root {
+      --bg-color: #111;
+      --container-bg: #292929;
+      --text-color: #f0f0f0;
+      --highlight: #ff4444;
+      --pre-bg: #1a1a1a;
+    }
+
+    body.light {
+      --bg-color: #f7f7f7;
+      --container-bg: #ffffff;
+      --text-color: #111;
+      --highlight: #d62828;
+      --pre-bg: #eeeeee;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.4s ease;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 60px auto;
+      background-color: var(--container-bg);
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+      animation: fadeInSlide 1.5s ease forwards;
+    }
+
+    h1 {
+      font-size: 70px;
+      color: var(--highlight);
+      text-align: center;
+      margin-bottom: 50px;
+      text-shadow:
+        0 0 20px rgba(255, 0, 0, 0.6),
+        0 0 40px rgba(255, 0, 0, 0.4);
+      animation: pulseGlow 3s ease-in-out infinite;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: var(--text-color);
+      margin-top: 50px;
+      border-left: 6px solid var(--highlight);
+      padding-left: 16px;
+      text-transform: uppercase;
+      font-weight: 700;
+      animation: slideIn 1s ease forwards;
+    }
+
+    pre {
+      background-color: var(--pre-bg);
+      border-left: 4px solid var(--highlight);
+      padding: 25px;
+      margin-top: 15px;
+      border-radius: 12px;
+      font-size: 16px;
+      white-space: pre-wrap;
+      box-shadow: 0 15px 30px rgba(255, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    pre:hover {
+      transform: rotateY(3deg) scale(1.02);
+      box-shadow: 0 20px 60px rgba(255, 0, 0, 0.25);
+    }
+
+    .actions {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: var(--highlight);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff2222;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInSlide {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        text-shadow: 0 0 20px rgba(255, 0, 0, 0.6), 0 0 40px rgba(255, 0, 0, 0.4);
+      }
+      50% {
+        text-shadow: 0 0 35px rgba(255, 0, 0, 0.8), 0 0 60px rgba(255, 0, 0, 0.6);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Correction</h1>
+
+    <div class="actions">
+      <button onclick="window.print()">Télécharger PDF</button>
+      <button onclick="toggleTheme()">Changer Thème</button>
+    </div>
+
+    <h2>Algorithme Chute Libre</h2>
+    <pre>
+Variables :
+    t : réel
+    g : réel
+    v : réel
+
+Début
+
+    Écrire("Entrez le temps de chute (t) en secondes : ")
+    Lire(t)
+
+    Écrire("Entrez l'accélération gravitationnelle (g) en m/s² : ")
+    Lire(g)
+
+    v ← g * t
+
+    Si v &lt; 30 Alors
+        Écrire("Pas dangereux")
+    Sinon Si v ≤ 60 Alors
+        Écrire("Danger modéré")
+    Sinon
+        Écrire("Danger élevé")
+    FinSi
+Fin
+    </pre>
+
+    <h2>Algorithme Suite Arithmétique</h2>
+    <pre>
+tdo:
+    n: entier          
+    premierTerme: réel  
+    raison: réel   
+    i: entier           
+    terme: réel         
+
+Début
+
+    ecrire("Entrez le nombre de termes à affchier (n): ") lire(n)
+    ecrire("Entrez le premier terme de la suite: ") lire(premierTerme)
+    ecrire("Entrez la raison de la suite: ") lire(raison)
+
+    ecrire("Les ", n, " premiers termes de la suite sont:")
+
+    pour i de 0 à n-1 faire
+        terme ← premierTerme + i * raison
+        ecrie(terme)
+    fin_pour 
+
+Fin
+    </pre>
+
+    <h2>Algorithme Vérifier Code</h2>
+    <pre>
+tdo:
+    code: chaîne
+    erreur: entier
+    i: entier
+
+début
+    ecrie("entree le code") lire(code)
+
+    si long(code-1) ≠ 9 alors
+        ecrie("Code invalide: doit avoir 9 caractères")
+    fin_si
+
+    sinon si code[0] &lt; '0' or code[0] &gt; '9' alors
+        ecrie("Code invalide: le premier caractère doit être un chiffre")
+    fin_si
+
+    sinon si code[1] != '-' alors
+        ecrie("Code invalide: le deuxième caractère doit être '-'")
+    fin_si
+
+    sinon
+        erreur = 0
+        pour i de 2 à 8 faire
+            si code[i] &lt; 'A' or code[i] &gt; 'Z' alors
+                erreur = 1
+            fin_si
+        fin_pour
+
+        si erreur = 1 alors
+            ecrie("Code invalide: les caractères doivent être des lettres majuscules")
+        sinon
+            ecrire("Code valide")
+        fin_si
+    fin
+    </pre>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light');
+    }
+  </script>
+</body>
+</html>
