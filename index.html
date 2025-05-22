@@ -78,6 +78,7 @@
       white-space: pre-wrap;
       box-shadow: 0 15px 30px rgba(255, 0, 0, 0.15);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow-x: auto;
     }
 
     pre:hover {
@@ -88,6 +89,7 @@
     .actions {
       text-align: center;
       margin-top: 30px;
+      flex-wrap: wrap;
     }
 
     button {
@@ -98,7 +100,7 @@
       color: white;
       border: none;
       border-radius: 10px;
-      margin: 0 10px;
+      margin: 10px 5px;
       cursor: pointer;
       transition: 0.3s;
     }
@@ -136,6 +138,35 @@
       }
       50% {
         text-shadow: 0 0 35px rgba(255, 0, 0, 0.8), 0 0 60px rgba(255, 0, 0, 0.6);
+      }
+    }
+
+    /* Responsive Design for Phones */
+    @media (max-width: 768px) {
+      .container {
+        padding: 25px;
+        margin: 30px 15px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      pre {
+        font-size: 14px;
+        padding: 15px;
+      }
+
+      button {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+        display: block;
+        font-size: 15px;
       }
     }
   </style>
@@ -247,3 +278,4 @@ début
   </script>
 </body>
 </html>
+
